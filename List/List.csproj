@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{99C9A376-9197-4226-B907-32E206015A73}</ProjectGuid>
+    <ProjectGuid>{AE849758-A6B7-4AE0-AE55-F9D0355DC8B6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Link</RootNamespace>
-    <AssemblyName>Link</AssemblyName>
+    <RootNamespace>List</RootNamespace>
+    <AssemblyName>List</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,9 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Node.cs" />
-    <Compile Include="DNode.cs" />
+    <Compile Include="ArrayList.cs" />
+    <Compile Include="IList.cs" />
+    <Compile Include="LinkedList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Link\Link.csproj">
+      <Project>{99c9a376-9197-4226-b907-32e206015a73}</Project>
+      <Name>Link</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
