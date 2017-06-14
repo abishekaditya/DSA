@@ -11,6 +11,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Programs", "Programs", "{C7
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListProgram", "ListProgram\ListProgram.csproj", "{003B1A8B-BDAE-42C2-B4BA-4CC8FC76B54C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stack", "Stack\Stack.csproj", "{2C2CEBA5-1B1B-4789-BDF0-55B1FC646E8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hanoi", "Hanoi\Hanoi.csproj", "{E58A14DB-452C-4BA8-956F-C7B318510AF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queue", "Queue\Queue.csproj", "{04158B2F-ADA6-472D-B094-91173C57BA81}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,11 +35,24 @@ Global
 		{003B1A8B-BDAE-42C2-B4BA-4CC8FC76B54C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{003B1A8B-BDAE-42C2-B4BA-4CC8FC76B54C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{003B1A8B-BDAE-42C2-B4BA-4CC8FC76B54C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C2CEBA5-1B1B-4789-BDF0-55B1FC646E8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C2CEBA5-1B1B-4789-BDF0-55B1FC646E8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C2CEBA5-1B1B-4789-BDF0-55B1FC646E8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C2CEBA5-1B1B-4789-BDF0-55B1FC646E8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E58A14DB-452C-4BA8-956F-C7B318510AF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E58A14DB-452C-4BA8-956F-C7B318510AF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E58A14DB-452C-4BA8-956F-C7B318510AF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E58A14DB-452C-4BA8-956F-C7B318510AF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04158B2F-ADA6-472D-B094-91173C57BA81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04158B2F-ADA6-472D-B094-91173C57BA81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04158B2F-ADA6-472D-B094-91173C57BA81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04158B2F-ADA6-472D-B094-91173C57BA81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{003B1A8B-BDAE-42C2-B4BA-4CC8FC76B54C} = {C77F8566-049B-4980-B336-DD821C8371E4}
+		{E58A14DB-452C-4BA8-956F-C7B318510AF5} = {C77F8566-049B-4980-B336-DD821C8371E4}
 	EndGlobalSection
 EndGlobal
