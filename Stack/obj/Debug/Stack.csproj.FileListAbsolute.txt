@@ -1,7 +1,0 @@
-C:\Users\Frostbit\Projects\DSA\Stack\bin\Debug\Stack.dll
-C:\Users\Frostbit\Projects\DSA\Stack\bin\Debug\Stack.pdb
-C:\Users\Frostbit\Projects\DSA\Stack\bin\Debug\Link.dll
-C:\Users\Frostbit\Projects\DSA\Stack\bin\Debug\Link.pdb
-C:\Users\Frostbit\Projects\DSA\Stack\obj\Debug\Stack.csprojResolveAssemblyReference.cache
-C:\Users\Frostbit\Projects\DSA\Stack\obj\Debug\Stack.dll
-C:\Users\Frostbit\Projects\DSA\Stack\obj\Debug\Stack.pdb
