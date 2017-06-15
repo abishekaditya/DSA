@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{04158B2F-ADA6-472D-B094-91173C57BA81}</ProjectGuid>
+    <ProjectGuid>{BA4BAA7A-521E-4FF7-800F-EE3677E3CA60}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Queue</RootNamespace>
-    <AssemblyName>Queue</AssemblyName>
+    <RootNamespace>Dictionary</RootNamespace>
+    <AssemblyName>Dictionary</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,15 +40,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArrayQueue.cs" />
-    <Compile Include="IQueue.cs" />
-    <Compile Include="LinkedQueue.cs" />
+    <Compile Include="ArrayDictionary.cs" />
+    <Compile Include="IDictionary.cs" />
+    <Compile Include="KeyValuePair.cs" />
+    <Compile Include="LinkedDictionary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Link\Link.csproj">
       <Project>{99c9a376-9197-4226-b907-32e206015a73}</Project>
       <Name>Link</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\List\List.csproj">
+      <Project>{ae849758-a6b7-4ae0-ae55-f9d0355dc8b6}</Project>
+      <Name>List</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

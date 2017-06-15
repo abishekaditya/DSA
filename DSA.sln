@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hanoi", "Hanoi\Hanoi.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queue", "Queue\Queue.csproj", "{04158B2F-ADA6-472D-B094-91173C57BA81}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dictionary", "Dictionary\Dictionary.csproj", "{BA4BAA7A-521E-4FF7-800F-EE3677E3CA60}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{04158B2F-ADA6-472D-B094-91173C57BA81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04158B2F-ADA6-472D-B094-91173C57BA81}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04158B2F-ADA6-472D-B094-91173C57BA81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA4BAA7A-521E-4FF7-800F-EE3677E3CA60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA4BAA7A-521E-4FF7-800F-EE3677E3CA60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA4BAA7A-521E-4FF7-800F-EE3677E3CA60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA4BAA7A-521E-4FF7-800F-EE3677E3CA60}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
