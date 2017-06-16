@@ -19,6 +19,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queue", "Queue\Queue.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dictionary", "Dictionary\Dictionary.csproj", "{BA4BAA7A-521E-4FF7-800F-EE3677E3CA60}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySearchTree", "BinarySearchTree\BinarySearchTree.csproj", "{E6C8A4D5-2A12-4DB9-84E9-F1392CFE1960}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BTreeTraversal", "BTreeTraversal\BTreeTraversal.csproj", "{CC518D1C-7537-46CF-B970-41C39D1604F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BST Operations", "BST Operations\BST Operations.csproj", "{800E457A-DB05-44B1-9BED-5E312BFF5042}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +59,18 @@ Global
 		{BA4BAA7A-521E-4FF7-800F-EE3677E3CA60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA4BAA7A-521E-4FF7-800F-EE3677E3CA60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA4BAA7A-521E-4FF7-800F-EE3677E3CA60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6C8A4D5-2A12-4DB9-84E9-F1392CFE1960}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6C8A4D5-2A12-4DB9-84E9-F1392CFE1960}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6C8A4D5-2A12-4DB9-84E9-F1392CFE1960}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6C8A4D5-2A12-4DB9-84E9-F1392CFE1960}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC518D1C-7537-46CF-B970-41C39D1604F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC518D1C-7537-46CF-B970-41C39D1604F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC518D1C-7537-46CF-B970-41C39D1604F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC518D1C-7537-46CF-B970-41C39D1604F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{800E457A-DB05-44B1-9BED-5E312BFF5042}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{800E457A-DB05-44B1-9BED-5E312BFF5042}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{800E457A-DB05-44B1-9BED-5E312BFF5042}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{800E457A-DB05-44B1-9BED-5E312BFF5042}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,5 +78,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{003B1A8B-BDAE-42C2-B4BA-4CC8FC76B54C} = {C77F8566-049B-4980-B336-DD821C8371E4}
 		{E58A14DB-452C-4BA8-956F-C7B318510AF5} = {C77F8566-049B-4980-B336-DD821C8371E4}
+		{CC518D1C-7537-46CF-B970-41C39D1604F3} = {C77F8566-049B-4980-B336-DD821C8371E4}
+		{800E457A-DB05-44B1-9BED-5E312BFF5042} = {C77F8566-049B-4980-B336-DD821C8371E4}
 	EndGlobalSection
 EndGlobal
