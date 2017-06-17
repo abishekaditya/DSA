@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Encoder.cs" />
     <Compile Include="HuffINode.cs" />
     <Compile Include="HuffLNode.cs" />
     <Compile Include="HuffmanTree.cs" />

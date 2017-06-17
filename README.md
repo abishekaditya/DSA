@@ -7,10 +7,8 @@
  4. ~~Queue~~
 
 ## Trees
-  1.~~Binary Tree~~
-  
-  2.~~Binary Search Tree~~
-  
+  1. ~~Binary Tree~~
+  2. ~~Binary Search Tree~~
   3. B+ Tree
   4. AVL Tree
   5. Red Black Tree
