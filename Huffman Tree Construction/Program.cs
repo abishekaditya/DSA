@@ -18,22 +18,10 @@ namespace Huffman_Tree_Construction
             var g = new HuffLNode<char>('U', 37);
             var h = new HuffLNode<char>('Z', 2);
             var heap = new MinHeap<IHuffNode>(new IHuffNode[]{a,b,c,d,e,f,g,h}, 15);
-            var huffmanTree =  HuffmanBuilder(heap);
+            var huffmanTree =  HuffmanTree<IHuffNode>.HuffmanBuilder(heap);
             huffmanTree.Print();
             Console.ReadLine();
         }
 
-        private static HuffmanTree<IHuffNode> HuffmanBuilder(MinHeap<IHuffNode> heap)
-        {
-            HuffmanTree<IHuffNode> temp3 = null;
-            while (heap.Size > 1)
-            {
-                var temp1 = heap.RemoveMin();
-                var temp2 = heap.RemoveMin();
-                temp3 = new HuffmanTree<IHuffNode>(temp1, temp2, temp1.Weight + temp2.Weight);
-                heap.Insert(temp3.RootNode);
-            }
-            return temp3;
-        }
     }
 }

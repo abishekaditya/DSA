@@ -42,5 +42,18 @@ namespace Huffman
             }
         }
 
+        public static HuffmanTree<IHuffNode> HuffmanBuilder(MinHeap<IHuffNode> heap)
+        {
+            HuffmanTree<IHuffNode> temp3 = null;
+            while (heap.Size > 1)
+            {
+                var temp1 = heap.RemoveMin();
+                var temp2 = heap.RemoveMin();
+                temp3 = new HuffmanTree<IHuffNode>(temp1, temp2, temp1.Weight + temp2.Weight);
+                heap.Insert(temp3.RootNode);
+            }
+            return temp3;
+        }
+
     }
 }
