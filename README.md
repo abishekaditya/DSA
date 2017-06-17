@@ -1,26 +1,33 @@
 # Data Structures and Algorithms in C#
 
 ## Simple Data Structures
- ~~ 1. Linked List ~~
- ~~ 2. Double Linked List ~~
- ~~  3. Stack ~~
- ~~  4. Queue ~~
+ ~~1. Linked List~~
+ 
+ ~~2. Double Linked List~~
+ 
+ ~~3. Stack ~~
+ 
+ ~~4. Queue ~~
 
 ## Trees
-  ~~ 1. Binary Tree ~~
-  ~~ 2. Binary Search Tree ~~
+  ~~1. Binary Tree~~
+  
+  ~~2. Binary Search Tree~~
+  
   3. B+ Tree
   4. AVL Tree
   5. Red Black Tree
   6. Splay Tree
   7. Heap
-     ~~ * Min Heap ~~
-     ~~ * Max Heap ~~
+     * ~~Min Heap~~
+     
+     * ~~Max Heap~~
+     
       * Fibonnaci Heap
   8. Suffix Tree (may skip)
   9. Spanning Tree (may skip)
   10. Trie
-  ~~ 11. Huffman ~~ 
+  ~~11. Huffman~~ 
   
 ## Advanced Data Structures (may skip)
   1. Skip List
