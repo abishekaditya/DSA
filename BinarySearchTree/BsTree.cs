@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Net.Security;
-using System.Runtime.InteropServices.ComTypes;
 using Link;
 
 namespace BinarySearchTree
@@ -49,7 +48,31 @@ namespace BinarySearchTree
             Length--;
             return temp;
         }
+        
+        private static BinNode<TKey, TValue> RemoveHelper(BinNode<TKey, TValue> rootNode, TKey key)
+        {
+            if (rootNode == null)
+                return null;
+            if (rootNode.Key.CompareTo(key) > 0)
+                rootNode.LeftNode = RemoveHelper((BinNode<TKey, TValue>)rootNode.LeftNode, key);
+            else if (rootNode.Key.CompareTo(key) < 0)
+                rootNode.RightNode = RemoveHelper((BinNode<TKey, TValue>)rootNode.RightNode, key);
+            else
+            {
+                if (rootNode.LeftNode == null)
+                    return (BinNode<TKey, TValue>)rootNode.LeftNode;
+                if (rootNode.RightNode == null)
+                    return (BinNode<TKey, TValue>)rootNode.RightNode;
+                var temp = GetMin((BinNode<TKey, TValue>)rootNode.RightNode);
+                rootNode.Element = temp.Element;
+                rootNode.Key = temp.Key;
+                rootNode.RightNode = DeleteMin(rootNode.RightNode);
+            }
 
+            return rootNode;
+
+        }
+        
         public TValue Find(TKey key)
         {
             return FindHelper(_rootNode, key);
@@ -63,30 +86,6 @@ namespace BinarySearchTree
                 return FindHelper((BinNode<TKey,TValue>)rootNode.LeftNode, key);
             }
             return rootNode.Key.CompareTo(key) == 0 ? rootNode.Element : FindHelper((BinNode<TKey, TValue>) rootNode.RightNode, key);
-        }
-
-        private static BinNode<TKey, TValue> RemoveHelper(BinNode<TKey, TValue> rootNode, TKey key)
-        {
-            if (rootNode == null)
-                return null;
-            if (rootNode.Key.CompareTo(key) > 0)
-                rootNode.LeftNode = RemoveHelper((BinNode<TKey, TValue>) rootNode.LeftNode, key);
-            else if (rootNode.Key.CompareTo(key) < 0)
-                rootNode.RightNode = RemoveHelper((BinNode<TKey, TValue>) rootNode.RightNode, key);
-            else
-            {
-                if (rootNode.LeftNode == null)
-                    return (BinNode<TKey, TValue>) rootNode.LeftNode;
-                if (rootNode.RightNode == null)
-                    return (BinNode<TKey, TValue>) rootNode.RightNode;
-                var temp = GetMin((BinNode<TKey, TValue>) rootNode.RightNode);
-                rootNode.Element = temp.Element;
-                rootNode.Key = temp.Key;
-                rootNode.RightNode = DeleteMin(rootNode.RightNode);
-            }
-
-            return rootNode;
-
         }
 
         private static IBNode<TValue> DeleteMin(IBNode<TValue> bNode)

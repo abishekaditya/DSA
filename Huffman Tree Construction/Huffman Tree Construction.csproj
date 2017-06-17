@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E6C8A4D5-2A12-4DB9-84E9-F1392CFE1960}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BinarySearchTree</RootNamespace>
-    <AssemblyName>BinarySearchTree</AssemblyName>
+    <ProjectGuid>{37887E1D-F55F-45DE-BF44-407F9CAB039D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Huffman_Tree_Construction</RootNamespace>
+    <AssemblyName>Huffman Tree Construction</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -40,21 +42,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BsTree.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Dictionary\Dictionary.csproj">
-      <Project>{ba4baa7a-521e-4ff7-800f-ee3677e3ca60}</Project>
-      <Name>Dictionary</Name>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Heap\Heap.csproj">
+      <Project>{ca9a0b1e-86da-4c4e-876e-89e919285a8d}</Project>
+      <Name>Heap</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Link\Link.csproj">
-      <Project>{99c9a376-9197-4226-b907-32e206015a73}</Project>
-      <Name>Link</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Link\Link.csproj">
-      <Project>{99C9A376-9197-4226-B907-32E206015A73}</Project>
-      <Name>Link</Name>
+    <ProjectReference Include="..\Huffman\Huffman.csproj">
+      <Project>{a5d6da97-49cc-4131-bd54-5d99a6751442}</Project>
+      <Name>Huffman</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
