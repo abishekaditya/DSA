@@ -17,7 +17,7 @@ namespace Trie
             Parent = parent;
         }
 
-        public bool IsLeaf() => Children.Length == 0;
+        public bool IsLeaf => Children.Length == 0;
 
         public TrieNode<T> FindChildNode(T c)
         {

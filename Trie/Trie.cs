@@ -5,16 +5,16 @@ namespace Trie
 {
     public class Trie : ITrie<string,char>
     {
-        private readonly TrieNode<char> _root;
-
         public Trie()
         {
-            _root = new TrieNode<char>('^', 0, null);
+            Root = new TrieNode<char>('^', 0, null);
         }
+
+        public TrieNode<char> Root { get; }
 
         public TrieNode<char> Prefix(string s)
         {
-            var currentNode = _root;
+            var currentNode = Root;
             var result = currentNode;
 
             foreach (var c in s)
@@ -60,7 +60,7 @@ namespace Trie
             if (!Search(s)) return;
             var node = Prefix(s).FindChildNode('$');
 
-            while (node.IsLeaf())
+            while (node.IsLeaf)
             {
                 var parent = node.Parent;
                 parent.DeleteChildNode(node.Value);
