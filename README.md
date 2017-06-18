@@ -13,13 +13,12 @@
   4. AVL Tree
   5. Red Black Tree
   6. Splay Tree
-  7. Heap
+  7. ~~Heap~~
      * ~~Min Heap~~
      * ~~Max Heap~~
-     * Fibonnaci Heap
   8. Suffix Tree (may skip)
   9. Spanning Tree (may skip)
-  10. Trie
+  10. ~~Trie~~
   11. ~~Huffman~~ 
   
 ## Advanced Data Structures (may skip)
