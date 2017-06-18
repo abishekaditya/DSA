@@ -35,6 +35,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Huffman", "Huffman\Huffman.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Huffman Tree Construction", "Huffman Tree Construction\Huffman Tree Construction.csproj", "{37887E1D-F55F-45DE-BF44-407F9CAB039D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trie", "Trie\Trie.csproj", "{799BC764-5036-48AC-954D-65D9F26D1B4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrieSearch", "TrieSearch\TrieSearch.csproj", "{39193951-1E68-4DD5-A03E-2DEC4326276B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -101,6 +105,14 @@ Global
 		{37887E1D-F55F-45DE-BF44-407F9CAB039D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37887E1D-F55F-45DE-BF44-407F9CAB039D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37887E1D-F55F-45DE-BF44-407F9CAB039D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{799BC764-5036-48AC-954D-65D9F26D1B4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{799BC764-5036-48AC-954D-65D9F26D1B4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{799BC764-5036-48AC-954D-65D9F26D1B4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{799BC764-5036-48AC-954D-65D9F26D1B4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39193951-1E68-4DD5-A03E-2DEC4326276B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39193951-1E68-4DD5-A03E-2DEC4326276B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39193951-1E68-4DD5-A03E-2DEC4326276B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39193951-1E68-4DD5-A03E-2DEC4326276B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -112,5 +124,6 @@ Global
 		{800E457A-DB05-44B1-9BED-5E312BFF5042} = {C77F8566-049B-4980-B336-DD821C8371E4}
 		{66850596-4D8F-43BC-956C-F961AF8255A7} = {C77F8566-049B-4980-B336-DD821C8371E4}
 		{37887E1D-F55F-45DE-BF44-407F9CAB039D} = {C77F8566-049B-4980-B336-DD821C8371E4}
+		{39193951-1E68-4DD5-A03E-2DEC4326276B} = {C77F8566-049B-4980-B336-DD821C8371E4}
 	EndGlobalSection
 EndGlobal
