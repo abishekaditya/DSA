@@ -36,6 +36,9 @@
   6. Quick
   7. Shell
   8. Merge
+  9. Counting
+  10. KMP
+  11. Rabin-Karp
  
  ## Hashes (LOW)
   1. Hash List
@@ -48,6 +51,7 @@
   2. Adjacency Matrix
   3. BFS
   4. DFS
+  5. Topoligical Sort
   5. Prim
   6. Kruskal
   7. Djikstra
