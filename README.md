@@ -6,7 +6,7 @@
  3. ~~Stack~~
  4. ~~Queue~~
 
-## Trees (HIGH)
+## Trees (HIGHEST)
   1. ~~Binary Tree~~
   2. ~~Binary Search Tree~~
   3. B+ Tree
@@ -16,18 +16,17 @@
   7. ~~Heap~~
      * ~~Min Heap~~
      * ~~Max Heap~~
-  8. Suffix Tree (LOWEST)
-  9. Spanning Tree (LOWEST)
-  10. ~~Trie~~
-  11. ~~Huffman~~ 
+  8. ~~Trie~~
+  9. ~~Huffman~~ 
   
 ## Advanced Data Structures (LOWEST)
   1. Skip List
+  2. Suffix Tree
   2. Difference List
   3. SPQR Tree
   4. Van Emde Boas Tree
   
- ## Sorting (MEDIUM)
+ ## Sorting (HIGH)
   1. Bubble
   2. Insertion
   3. Selection
@@ -37,6 +36,7 @@
   7. Shell
   8. Merge
   9. Counting
+  -----------
   10. KMP
   11. Rabin-Karp
  
@@ -46,7 +46,7 @@
   3. Hash Tree
   4. Bloom Filter
   
- ## Graph Traversal (LOW)
+ ## Graph Traversal (MEDIUM)
   1. Adjacency List
   2. Adjacency Matrix
   3. BFS
