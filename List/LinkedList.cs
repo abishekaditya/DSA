@@ -1,8 +1,8 @@
 ﻿using System;
 using Link;
+
 namespace List
 {
-
     public class LinkedList<T> : IList<T>
     {
         private Node<T> _headNode;
@@ -26,9 +26,7 @@ namespace List
         {
             CurrentNode.Next = new Node<T>(item, CurrentNode.Next);
             if (_tailNode == CurrentNode)
-            {
                 _tailNode = CurrentNode.Next;
-            }
             Length++;
         }
 
@@ -88,14 +86,10 @@ namespace List
             set
             {
                 if (value <= 0 && value > Length)
-                {
                     throw new IndexOutOfRangeException();
-                }
                 CurrentNode = _headNode;
                 for (var i = 0; i < value; i++)
-                {
                     CurrentNode = CurrentNode.Next;
-                }
             }
         }
 

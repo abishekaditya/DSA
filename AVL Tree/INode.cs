@@ -1,5 +1,4 @@
-﻿
-namespace AVL_Tree
+﻿namespace AVL_Tree
 {
     public interface INode<T>
     {

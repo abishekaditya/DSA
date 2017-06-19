@@ -2,10 +2,10 @@
 {
     public interface IDictionary<in TKey, TValue>
     {
-        void Clear();
         TValue this[TKey key] { get; set; }
-        TValue Remove(TKey key);
         int Length { get; }
+        void Clear();
+        TValue Remove(TKey key);
         TValue RemoveAny();
     }
 }

@@ -1,6 +1,4 @@
-﻿
-using Link;
-using List;
+﻿using List;
 
 namespace Dictionary
 {
@@ -12,6 +10,7 @@ namespace Dictionary
         {
             _list = new LinkedList<KeyValuePair<TKey, TValue>>();
         }
+
         public void Clear()
         {
             _list.Clear();

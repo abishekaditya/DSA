@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Net.Security;
 using Link;
 
 namespace BinarySearchTree
@@ -8,14 +7,14 @@ namespace BinarySearchTree
     public class BsTree<TKey, TValue> : Dictionary<TKey, TValue> where TKey : IComparable
     {
         private BinNode<TKey, TValue> _rootNode;
-        
-        public int Length { get; private set; }
 
         public BsTree()
         {
             _rootNode = null;
             Length = 0;
         }
+
+        public int Length { get; private set; }
 
         public new void Clear()
         {
@@ -34,9 +33,9 @@ namespace BinarySearchTree
             if (rootNode == null)
                 return new BinNode<TKey, TValue>(key, value);
             if (rootNode.Key.CompareTo(key) > 0)
-                rootNode.LeftNode = InsertHelper((BinNode<TKey,TValue>) rootNode.LeftNode, key, value);
+                rootNode.LeftNode = InsertHelper((BinNode<TKey, TValue>) rootNode.LeftNode, key, value);
             else
-                rootNode.RightNode = InsertHelper((BinNode<TKey, TValue>)rootNode.RightNode, key, value);
+                rootNode.RightNode = InsertHelper((BinNode<TKey, TValue>) rootNode.RightNode, key, value);
             return rootNode;
         }
 
@@ -48,31 +47,34 @@ namespace BinarySearchTree
             Length--;
             return temp;
         }
-        
+
         private static BinNode<TKey, TValue> RemoveHelper(BinNode<TKey, TValue> rootNode, TKey key)
         {
             if (rootNode == null)
                 return null;
             if (rootNode.Key.CompareTo(key) > 0)
-                rootNode.LeftNode = RemoveHelper((BinNode<TKey, TValue>)rootNode.LeftNode, key);
+            {
+                rootNode.LeftNode = RemoveHelper((BinNode<TKey, TValue>) rootNode.LeftNode, key);
+            }
             else if (rootNode.Key.CompareTo(key) < 0)
-                rootNode.RightNode = RemoveHelper((BinNode<TKey, TValue>)rootNode.RightNode, key);
+            {
+                rootNode.RightNode = RemoveHelper((BinNode<TKey, TValue>) rootNode.RightNode, key);
+            }
             else
             {
                 if (rootNode.LeftNode == null)
-                    return (BinNode<TKey, TValue>)rootNode.LeftNode;
+                    return (BinNode<TKey, TValue>) rootNode.LeftNode;
                 if (rootNode.RightNode == null)
-                    return (BinNode<TKey, TValue>)rootNode.RightNode;
-                var temp = GetMin((BinNode<TKey, TValue>)rootNode.RightNode);
+                    return (BinNode<TKey, TValue>) rootNode.RightNode;
+                var temp = GetMin((BinNode<TKey, TValue>) rootNode.RightNode);
                 rootNode.Element = temp.Element;
                 rootNode.Key = temp.Key;
                 rootNode.RightNode = DeleteMin(rootNode.RightNode);
             }
 
             return rootNode;
-
         }
-        
+
         public TValue Find(TKey key)
         {
             return FindHelper(_rootNode, key);
@@ -82,10 +84,10 @@ namespace BinarySearchTree
         {
             if (rootNode == null) return default(TValue);
             if (rootNode.Key.CompareTo(key) > 0)
-            {
-                return FindHelper((BinNode<TKey,TValue>)rootNode.LeftNode, key);
-            }
-            return rootNode.Key.CompareTo(key) == 0 ? rootNode.Element : FindHelper((BinNode<TKey, TValue>) rootNode.RightNode, key);
+                return FindHelper((BinNode<TKey, TValue>) rootNode.LeftNode, key);
+            return rootNode.Key.CompareTo(key) == 0
+                ? rootNode.Element
+                : FindHelper((BinNode<TKey, TValue>) rootNode.RightNode, key);
         }
 
         private static IBNode<TValue> DeleteMin(IBNode<TValue> bNode)
@@ -113,9 +115,9 @@ namespace BinarySearchTree
         private static void Inorder(BinNode<TKey, TValue> rt)
         {
             if (rt == null) return;
-            Inorder((BinNode<TKey, TValue>)rt.LeftNode);
+            Inorder((BinNode<TKey, TValue>) rt.LeftNode);
             Console.WriteLine(rt.Key + " " + rt.Element);
-            Inorder((BinNode<TKey, TValue>)rt.RightNode);
+            Inorder((BinNode<TKey, TValue>) rt.RightNode);
         }
     }
 }

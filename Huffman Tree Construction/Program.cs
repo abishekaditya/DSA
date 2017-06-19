@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Text;
 using Heap;
 using Huffman;
 
@@ -17,11 +16,10 @@ namespace Huffman_Tree_Construction
             var f = new HuffLNode<char>('M', 24);
             var g = new HuffLNode<char>('U', 37);
             var h = new HuffLNode<char>('Z', 2);
-            var heap = new MinHeap<IHuffNode>(new IHuffNode[]{a,b,c,d,e,f,g,h}, 15);
-            var huffmanTree =  HuffmanTree<IHuffNode>.HuffmanBuilder(heap);
+            var heap = new MinHeap<IHuffNode>(new IHuffNode[] {a, b, c, d, e, f, g, h}, 15);
+            var huffmanTree = HuffmanTree<IHuffNode>.HuffmanBuilder(heap);
             huffmanTree.Print();
             Console.ReadLine();
         }
-
     }
 }

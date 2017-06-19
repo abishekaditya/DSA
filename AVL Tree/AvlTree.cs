@@ -1,5 +1,4 @@
 ﻿using System;
-using static Utilities.Utilities;
 
 namespace AVL_Tree
 {
@@ -22,23 +21,15 @@ namespace AVL_Tree
         private static INode<T> Insert(INode<T> where, INode<T> node)
         {
             if (where == null)
-            {
                 return node;
-            }
 
             var comp = where.Value.CompareTo(node.Value);
             if (comp == 0)
-            {
                 where.Value = node.Value;
-            }
             else if (comp < 0)
-            {
                 where.Right = Insert(where.Right, node);
-            }
             else
-            {
                 where.Left = Insert(where.Left, node);
-            }
 
             return where.Balance();
         }
@@ -51,22 +42,14 @@ namespace AVL_Tree
             if (comp == 0)
             {
                 if (node.Left == null && node.Right == null)
-                {
                     return null;
-                }
                 if (node.Left == null)
-                {
                     return node.Right;
-                }
                 if (node.Right == null)
-                {
                     return node.Left;
-                }
                 var left = node.Right;
                 while (left.Left != null)
-                {
                     left = left.Left;
-                }
 
                 left.Right = DeleteLeft(node.Right);
                 left.Left = node.Left;
@@ -83,9 +66,7 @@ namespace AVL_Tree
         private static INode<T> DeleteLeft(INode<T> node)
         {
             if (node.Left == null)
-            {
                 return node.Right;
-            }
             node.Left = DeleteLeft(node.Left);
             return node.Balance();
         }
@@ -95,7 +76,7 @@ namespace AVL_Tree
         {
             _rootNode = Insert(_rootNode, new AvlNode<T>(value));
         }
-        
+
         public void Delete(T value)
         {
             _rootNode = Delete(_rootNode, value);

@@ -1,18 +1,7 @@
-﻿using System;
-using System.Net.Http.Headers;
-
-namespace Huffman
+﻿namespace Huffman
 {
     public class HuffINode : IHuffNode
     {
-
-        public IHuffNode LeftNode { get; private set; }
-        public IHuffNode RightNode { get; private set; }
-
-        public bool Leaf => false;
-
-        public int Weight { get; }
-
         public HuffINode(IHuffNode leftNode, IHuffNode rightNode, int weight)
         {
             LeftNode = leftNode;
@@ -20,11 +9,18 @@ namespace Huffman
             Weight = weight;
         }
 
+        public IHuffNode LeftNode { get; }
+        public IHuffNode RightNode { get; }
+
+        public bool Leaf => false;
+
+        public int Weight { get; }
+
 
         public int CompareTo(object obj)
         {
-            var item = (IHuffNode)obj;
-            return (item.Weight > Weight) ? -1 : (item.Weight == Weight) ? 0 : 1;
+            var item = (IHuffNode) obj;
+            return item.Weight > Weight ? -1 : item.Weight == Weight ? 0 : 1;
         }
     }
 }

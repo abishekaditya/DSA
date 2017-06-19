@@ -2,7 +2,7 @@
 
 namespace Trie
 {
-    public interface ITrie<T,TPart>
+    public interface ITrie<T, TPart>
     {
         TrieNode<TPart> Prefix(T value);
         bool Search(T value);

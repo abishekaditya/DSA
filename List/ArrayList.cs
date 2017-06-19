@@ -5,9 +5,9 @@ namespace List
     public class ArrayList<T> : IList<T>
     {
         private const int DefaultSize = 10;
+        private readonly T[] _array;
         private readonly int _maxSize;
         private int _curr;
-        private readonly T[] _array;
 
         public ArrayList(int maxSize)
         {
@@ -16,7 +16,9 @@ namespace List
             _array = new T[maxSize];
         }
 
-        public ArrayList() : this(DefaultSize) { }
+        public ArrayList() : this(DefaultSize)
+        {
+        }
 
         public void Clear()
         {
@@ -48,7 +50,7 @@ namespace List
 
         public T Remove()
         {
-            if ((_curr < 0) || (_curr >= Length)) return default(T);
+            if (_curr < 0 || _curr >= Length) return default(T);
             var item = _array[_curr];
             for (var i = _curr; i < Length - 1; i++)
                 _array[i] = _array[i + 1];
@@ -87,10 +89,10 @@ namespace List
             set
             {
                 if (value <= 0) throw new ArgumentOutOfRangeException(nameof(value));
-                _curr = (value >= 0) && (value <= Length) ? value : throw new Exception("Out of Range");
+                _curr = value >= 0 && value <= Length ? value : throw new Exception("Out of Range");
             }
         }
 
-        public T Value => (_curr >= 0) && (_curr < Length) ? _array[_curr] : throw new Exception("No current element");
+        public T Value => _curr >= 0 && _curr < Length ? _array[_curr] : throw new Exception("No current element");
     }
 }

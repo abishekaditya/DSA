@@ -1,9 +1,8 @@
-﻿using System;
-using List;
+﻿using List;
 
 namespace Trie
 {
-    public class Trie : ITrie<string,char>
+    public class Trie : ITrie<string, char>
     {
         public Trie()
         {

@@ -4,8 +4,30 @@ namespace Link
 {
     public class BinNode<TKey, TValue> : IBNode<TValue> where TKey : IComparable
     {
-        private BinNode<TKey,TValue> _right;
         private BinNode<TKey, TValue> _left;
+        private BinNode<TKey, TValue> _right;
+
+        public BinNode()
+        {
+            _right = _left = null;
+        }
+
+        public BinNode(TKey key, TValue value)
+        {
+            _right = _left = null;
+            Key = key;
+            Element = value;
+        }
+
+        public BinNode(TKey key, TValue value, BinNode<TKey, TValue> leftNode, BinNode<TKey, TValue> rightNode)
+        {
+            _right = rightNode;
+            _left = leftNode;
+            Key = key;
+            Element = value;
+        }
+
+        public TKey Key { get; set; }
         public TValue Element { get; set; }
 
         public IBNode<TValue> LeftNode
@@ -21,29 +43,7 @@ namespace Link
         }
 
 
-        public bool IsLeaf => (_left == null && _right == null);
-
-        public TKey Key { get; set; }
-
-        public BinNode()
-        {
-            _right = _left = null;
-        }
-
-        public BinNode(TKey key, TValue value)
-        {
-            _right = _left = null;
-            Key = key;
-            Element = value;
-        }
-
-        public BinNode(TKey key, TValue value, BinNode<TKey,TValue> leftNode, BinNode<TKey,TValue> rightNode)
-        {
-            _right = rightNode;
-            _left = leftNode;
-            Key = key;
-            Element = value;
-        }
+        public bool IsLeaf => _left == null && _right == null;
 
         public static void Preorder(BinNode<TKey, TValue> rt)
         {
@@ -59,8 +59,8 @@ namespace Link
         public static void Postorder(BinNode<TKey, TValue> rt)
         {
             if (rt == null) return;
-            Postorder((BinNode<TKey, TValue>)rt.LeftNode);
-            Postorder((BinNode<TKey, TValue>)rt.RightNode);
+            Postorder((BinNode<TKey, TValue>) rt.LeftNode);
+            Postorder((BinNode<TKey, TValue>) rt.RightNode);
             Console.WriteLine(rt.Key + " " + rt.Element);
         }
 
@@ -86,6 +86,4 @@ namespace Link
             }
         }
     }
-    
-    
 }

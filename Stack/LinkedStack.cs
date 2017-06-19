@@ -12,12 +12,6 @@ namespace Stack
             Reset();
         }
 
-        private void Reset()
-        {
-            Length = 0;
-            _topLink = null;
-        }
-
         public void Clear()
         {
             Reset();
@@ -37,7 +31,6 @@ namespace Stack
             _topLink = _topLink.Next;
             Length--;
             return item;
-
         }
 
         public int Length { get; private set; }
@@ -47,6 +40,12 @@ namespace Stack
             if (_topLink == null)
                 throw new Exception("Empty Stack");
             return _topLink.Element;
+        }
+
+        private void Reset()
+        {
+            Length = 0;
+            _topLink = null;
         }
     }
 }

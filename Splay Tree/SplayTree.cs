@@ -5,8 +5,8 @@ namespace Splay_Tree
 {
     public class SplayTree<T> where T : IComparable<T>
     {
-        private ISplayNode<T> _rootNode;
         private readonly HashSet<ISplayNode<T>> _wasRead = new HashSet<ISplayNode<T>>();
+        private ISplayNode<T> _rootNode;
 
         public void Clear()
         {
@@ -17,7 +17,6 @@ namespace Splay_Tree
         private void Splay(ISplayNode<T> node)
         {
             while (node.Parent != null)
-            {
                 if (node.Parent.Parent == null)
                 {
                     if (node.Parent.Left == node)
@@ -30,7 +29,7 @@ namespace Splay_Tree
                     RotateR(node.Parent.Parent);
                     RotateR(node.Parent);
                 }
-                else if (node.Parent.Right == node && node.Parent.Parent.Right == node.Parent )
+                else if (node.Parent.Right == node && node.Parent.Parent.Right == node.Parent)
                 {
                     RotateL(node.Parent.Parent);
                     RotateL(node.Parent);
@@ -45,8 +44,6 @@ namespace Splay_Tree
                     RotateL(node.Parent.Parent);
                     RotateR(node.Parent);
                 }
-
-            }
         }
 
         public T Find(T key)
@@ -65,9 +62,7 @@ namespace Splay_Tree
             {
                 prev = current;
                 if (!_wasRead.Contains(current))
-                {
                     _wasRead.Add(current);
-                }
                 var cmp = key.CompareTo(current.Value);
 
                 if (cmp < 0) current = current.Left;
@@ -205,10 +200,10 @@ namespace Splay_Tree
             if (rootNode == null)
                 return null;
             if (rootNode.Left == null)
-                    return rootNode.Left;
+                return rootNode.Left;
             if (rootNode.Right == null)
-                    return rootNode.Right;
-            
+                return rootNode.Right;
+
             var temp = GetMax(rootNode.Left);
             rootNode.Value = temp.Value;
             rootNode.Left = DeleteMax(rootNode.Left);

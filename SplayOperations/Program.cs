@@ -1,5 +1,6 @@
 ﻿using System;
 using Splay_Tree;
+
 namespace Splay_Operations
 {
     internal static class Program

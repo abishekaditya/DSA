@@ -2,10 +2,10 @@
 {
     public interface IStack<T>
     {
+        int Length { get; }
         void Clear();
         void Push(T item);
         T Pop();
-        int Length { get; }
         T Top();
     }
 }

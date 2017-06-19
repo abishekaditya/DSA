@@ -6,9 +6,9 @@ namespace Queue
     {
         private const int DefaultSize = 10;
         private readonly int _maxSize;
+        private readonly T[] _array;
         private int _front;
         private int _rear;
-        private T[] _array;
 
         public ArrayQueue(int maxSize)
         {
@@ -30,7 +30,7 @@ namespace Queue
 
         public void Enqueue(T item)
         {
-            if ((_rear + 2) % _maxSize != _front )
+            if ((_rear + 2) % _maxSize != _front)
                 throw new IndexOutOfRangeException();
             _rear = (_rear + 1) % _maxSize;
             _array[_rear] = item;
@@ -55,6 +55,6 @@ namespace Queue
             }
         }
 
-        public int Length => ((_rear + _maxSize) - _front + 1) % _maxSize;
+        public int Length => (_rear + _maxSize - _front + 1) % _maxSize;
     }
 }

@@ -1,5 +1,4 @@
-﻿using Utilities;
-namespace AVL_Tree
+﻿namespace AVL_Tree
 {
     public class AvlNode<T> : INode<T>
     {
@@ -10,6 +9,7 @@ namespace AVL_Tree
             Right = null;
             Height = 1;
         }
+
         public T Value { get; set; }
         public int Height { get; set; }
         public INode<T> Left { get; set; }
@@ -20,7 +20,9 @@ namespace AVL_Tree
         {
             Height = 1;
             if (Left != null && Right != null)
+            {
                 Height += Utilities.Utilities.Max(Left.Height, Right.Height);
+            }
             else
             {
                 if (Left != null)
@@ -36,9 +38,7 @@ namespace AVL_Tree
             if (Left != null)
                 balance += Left.Height;
             if (Right != null)
-            {
                 balance -= Right.Height;
-            }
             return balance;
         }
 
@@ -50,21 +50,18 @@ namespace AVL_Tree
             if (balance > 1)
             {
                 if (Left.GetBalance() < 0)
-                {
                     Left = Left.RotateRight();
-                }
                 return RotateRight();
-            } else if (balance < -1)
+            }
+            if (balance < -1)
             {
                 if (Right.GetBalance() > 0)
-                {
                     Right = Right.RotateRight();
-                }
                 return RotateLeft();
             }
             return this;
         }
-        
+
         public INode<T> RotateRight()
         {
             var temp = Left;
@@ -84,7 +81,6 @@ namespace AVL_Tree
             ComputeHeight();
             temp.Left = this;
             temp.ComputeHeight();
-          //temp.Parent = this.Parent;
             return temp;
         }
     }

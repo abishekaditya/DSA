@@ -5,8 +5,6 @@ namespace Stack
     public class ArrayStack<T> : IStack<T>
     {
         private const int DefaultSize = 10;
-        public int MaxSize { get; }
-        public T[] ListArray { get; }
 
         public ArrayStack(int size)
         {
@@ -18,6 +16,9 @@ namespace Stack
         public ArrayStack() : this(DefaultSize)
         {
         }
+
+        public int MaxSize { get; }
+        public T[] ListArray { get; }
 
         public void Clear()
         {
@@ -35,7 +36,7 @@ namespace Stack
         {
             if (Length == 0)
                 throw new Exception("Empty Stack");
-            
+
             return ListArray[--Length];
         }
 
@@ -45,8 +46,8 @@ namespace Stack
         {
             if (Length == 0)
                 throw new Exception("Empty Stack");
-            
-            return ListArray[Length-1];
+
+            return ListArray[Length - 1];
         }
     }
 }

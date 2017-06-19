@@ -7,7 +7,6 @@ namespace Heap
     {
         private readonly T[] _heap;
         private readonly int _maxSize;
-        public int Size { get; private set; }
 
         public MinHeap(T[] heap, int maxSize)
         {
@@ -16,6 +15,8 @@ namespace Heap
             Size = heap.Length;
             BuildHeap();
         }
+
+        public int Size { get; private set; }
 
         public void BuildHeap()
         {
@@ -26,29 +27,22 @@ namespace Heap
         private void SiftDown(int pos)
         {
             if (pos < 0 && pos >= Size)
-            {
                 throw new Exception("Illegal Position");
-            }
             while (!IsLeaf(pos))
             {
                 var temp = LeftChild(pos);
-                if (temp < (Size - 1) && _heap[temp].CompareTo(_heap[temp + 1]) > 0)
-                {
+                if (temp < Size - 1 && _heap[temp].CompareTo(_heap[temp + 1]) > 0)
                     temp++;
-                }
-                if (_heap[pos].CompareTo((_heap[temp])) <= 0)
-                {
+                if (_heap[pos].CompareTo(_heap[temp]) <= 0)
                     return;
-                }
                 Swap(_heap, pos, temp);
                 pos = temp;
-
             }
         }
 
         private bool IsLeaf(int pos)
         {
-            return (pos >= Size / 2) && (pos < Size);
+            return pos >= Size / 2 && pos < Size;
         }
 
         private int LeftChild(int pos)
@@ -78,7 +72,7 @@ namespace Heap
                 throw new Exception("Heap is Full");
             var curr = Size++;
             _heap[curr] = value;
-            while ((curr != 0) && (_heap[curr].CompareTo(_heap[Parent(curr)]) <= 0))
+            while (curr != 0 && _heap[curr].CompareTo(_heap[Parent(curr)]) <= 0)
             {
                 Swap(_heap, curr, Parent(curr));
                 curr = Parent(curr);
@@ -100,11 +94,13 @@ namespace Heap
             if (pos < 0 && pos >= Size)
                 throw new Exception("Illegal Position");
             if (pos == Size - 1)
+            {
                 Size--;
+            }
             else
             {
                 Swap(_heap, pos, --Size);
-                while (pos > 0 && (_heap[pos].CompareTo(_heap[Parent(pos)]) <= 0))
+                while (pos > 0 && _heap[pos].CompareTo(_heap[Parent(pos)]) <= 0)
                 {
                     Swap(_heap, pos, Parent(pos));
                     pos = Parent(pos);
@@ -117,11 +113,8 @@ namespace Heap
         public void Print()
         {
             for (var i = 0; i < Size; i++)
-            {
                 Console.Write(_heap[i] + " ");
-            }
             Console.WriteLine();
         }
-
     }
 }

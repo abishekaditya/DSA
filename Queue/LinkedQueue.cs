@@ -13,6 +13,7 @@ namespace Queue
             _rearNode = _frontNode = new Node<T>(null);
             Length = 0;
         }
+
         public void Clear()
         {
             _rearNode = _frontNode = new Node<T>(null);
@@ -36,7 +37,6 @@ namespace Queue
                 _frontNode = _rearNode;
             Length--;
             return item;
-
         }
 
         public T Front

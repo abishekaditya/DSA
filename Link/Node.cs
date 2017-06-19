@@ -13,7 +13,7 @@
             Next = next;
         }
 
-        public T Element { get; private set; }
+        public T Element { get; }
         public Node<T> Next { get; set; }
     }
 }

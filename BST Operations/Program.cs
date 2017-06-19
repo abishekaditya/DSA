@@ -7,10 +7,10 @@ namespace BST_Operations
     {
         private static void Main()
         {
-            var tree = new BsTree<int,char>();
+            var tree = new BsTree<int, char>();
             tree.Insert(22, 'G');
             tree.Insert(511, 'E');
-            tree.Insert(45,'X');
+            tree.Insert(45, 'X');
             tree.Clear();
             tree.Insert(43, 'H');
             tree.Insert(25, 'G');

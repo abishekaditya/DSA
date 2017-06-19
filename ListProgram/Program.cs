@@ -17,9 +17,7 @@ namespace ListProgram
             myArrayList.Next();
             myArrayList.Insert(33);
             for (myArrayList.MoveToStart(); myArrayList.Position < myArrayList.Length; myArrayList.Next())
-            {
                 Console.Write(myArrayList.Value + " ");
-            }
             Console.WriteLine("\nLength : " + myArrayList.Length);
 
             myArrayList.Position = 3;
@@ -27,9 +25,7 @@ namespace ListProgram
 
             Console.WriteLine("New Length : " + myArrayList.Length);
             for (myArrayList.MoveToStart(); myArrayList.Position < myArrayList.Length; myArrayList.Next())
-            {
                 Console.Write(myArrayList.Value + " ");
-            }
             Console.ReadLine();
             var myLinkedList = new LinkedList<int>();
             myLinkedList.Append(30);
@@ -41,9 +37,7 @@ namespace ListProgram
             myLinkedList.Next();
             myLinkedList.Insert(33);
             for (myLinkedList.MoveToStart(); myLinkedList.Position < myLinkedList.Length; myLinkedList.Next())
-            {
                 Console.Write(myLinkedList.Value + " ");
-            }
             Console.WriteLine("\nLength : " + myLinkedList.Length);
 
             myLinkedList.Position = 3;
@@ -51,11 +45,8 @@ namespace ListProgram
 
             Console.WriteLine("New Length : " + myLinkedList.Length);
             for (myLinkedList.MoveToStart(); myLinkedList.Position < myLinkedList.Length; myLinkedList.Next())
-            {
                 Console.Write(myLinkedList.Value + " ");
-            }
             Console.ReadKey();
-
         }
     }
 }

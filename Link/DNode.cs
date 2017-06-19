@@ -2,8 +2,6 @@
 {
     public class DNode<T>
     {
-       
-
         public DNode(T item, DNode<T> prevNode, DNode<T> nextNode)
         {
             Element = item;

@@ -34,12 +34,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
@@ -49,10 +43,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\List\List.csproj">
-      <Project>{ae849758-a6b7-4ae0-ae55-f9d0355dc8b6}</Project>
-      <Name>List</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Trie\Trie.csproj">
       <Project>{799bc764-5036-48ac-954d-65d9f26d1b4e}</Project>
       <Name>Trie</Name>
