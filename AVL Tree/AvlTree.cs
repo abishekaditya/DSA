@@ -19,7 +19,7 @@ namespace AVL_Tree
             _rootNode = null;
         }
 
-        private INode<T> Insert(INode<T> where, INode<T> node)
+        private static INode<T> Insert(INode<T> where, INode<T> node)
         {
             if (where == null)
             {
@@ -43,7 +43,7 @@ namespace AVL_Tree
             return where.Balance();
         }
 
-        private INode<T> Delete(INode<T> node, T value)
+        private static INode<T> Delete(INode<T> node, T value)
         {
             if (node == null) throw new ArgumentOutOfRangeException();
             var comp = node.Value.CompareTo(value);

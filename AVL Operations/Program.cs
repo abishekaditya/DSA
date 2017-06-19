@@ -14,7 +14,7 @@ namespace AVL_Operations
             tree.Insert(8);
             tree.Insert(9);
             Console.ReadKey();
-            tree.Preorder();
+            tree.Inorder();
             Console.ReadKey();
         }
     }
