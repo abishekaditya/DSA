@@ -11,7 +11,7 @@
   2. ~~Binary Search Tree~~
   3. B+ Tree
   4. ~~AVL Tree~~
-  5. Red Black Tree
+  5. ~~Red Black Tree~~ (deletion remaining)
   6. ~~Splay Tree~~
   7. ~~Heap~~
      * ~~Min Heap~~
