@@ -1,7 +1,7 @@
 ﻿using System;
 using Link;
 
-namespace BTreeTraversal
+namespace BinTreeTraversal
 {
     internal static class Program
     {

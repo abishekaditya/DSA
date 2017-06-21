@@ -20,9 +20,7 @@
         {
             Height = 1;
             if (Left != null && Right != null)
-            {
                 Height += Utilities.Utilities.Max(Left.Height, Right.Height);
-            }
             else
             {
                 if (Left != null)
@@ -53,13 +51,10 @@
                     Left = Left.RotateRight();
                 return RotateRight();
             }
-            if (balance < -1)
-            {
-                if (Right.GetBalance() > 0)
-                    Right = Right.RotateRight();
-                return RotateLeft();
-            }
-            return this;
+            if (balance >= -1) return this;
+            if (Right.GetBalance() > 0)
+                Right = Right.RotateRight();
+            return RotateLeft();
         }
 
         public INode<T> RotateRight()
