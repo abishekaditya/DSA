@@ -18,7 +18,7 @@ namespace BST_Operations
             tree.Insert(62, 'F');
             tree.Remove(62);
             tree.Insert(21, 'D');
-            tree.Print();
+            tree.Inorder();
             Console.WriteLine(tree.Length);
             Console.WriteLine(tree.Find(25));
             Console.ReadLine();

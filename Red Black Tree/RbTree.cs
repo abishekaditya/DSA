@@ -35,25 +35,49 @@ namespace Red_Black_Tree
 
         public void Inorder()
         {
-            throw new NotImplementedException();
+            Inorder(_rootNode);
+            Console.WriteLine();
+        }
+
+        private static void Inorder(INode<T> node)
+        {
+            if (node == null) return;
+            Inorder(node.Left);
+            Console.Write($"( {node.Value} : {node.Colour} ) ");
+            Inorder(node.Right);
         }
 
         public void Preorder()
         {
-            throw new NotImplementedException();
+            Preorder(_rootNode);
+            Console.WriteLine();
+        }
+
+        private static void Preorder(INode<T> node)
+        {
+            if (node == null) return;
+            Console.Write($"( {node.Value} : {node.Colour} ) ");
+            Preorder(node.Left);
+            Preorder(node.Right);
         }
 
         public void Postorder()
         {
-            throw new NotImplementedException();
+            Postorder(_rootNode);
+            Console.WriteLine();
         }
+
+        private static void Postorder(INode<T> node)
+        {
+            if (node == null) return;
+            Postorder(node.Left);
+            Postorder(node.Right);
+            Console.Write($"( {node.Value} : {node.Colour} ) ");
+        }
+
 
         private void Balance(ref INode<T> where,ref INode<T> node)
         {
-            if (node == _rootNode)
-            {
-                node.Colour = Colour.Black;
-            }
             while (node != where && node.Colour == Colour.Red && node.Parent.Colour == Colour.Red)
             {
                 var parent = node.Parent;
@@ -110,6 +134,7 @@ namespace Red_Black_Tree
                     }
                 }
             }
+            where.Colour = Colour.Black;
         }
 
         private void RotateLeft(ref INode<T> where,ref INode<T> node)
@@ -165,6 +190,26 @@ namespace Red_Black_Tree
             return where;
         }
 
-        
+
+        public bool Find(T value)
+        {
+            return Find(_rootNode, value) != null;
+        }
+
+        private static INode<T> Find(INode<T> where, T value)
+        {
+            if (where == null) return null;
+            
+            var cmp = value.CompareTo(where.Value);
+            if (cmp < 0)
+            {
+                return Find(where.Left, value);
+            }
+            else if (cmp > 0)
+            {
+                return Find(where.Right, value);
+            }
+            else return where;
+        }
     }
 }

@@ -107,17 +107,49 @@ namespace BinarySearchTree
             }
         }
 
-        public void Print()
+        public void Inorder()
         {
             Inorder(_rootNode);
+            Console.WriteLine();
         }
 
-        private static void Inorder(BinNode<TKey, TValue> rt)
+        private static void Inorder(BinNode<TKey,TValue> node)
         {
-            if (rt == null) return;
-            Inorder((BinNode<TKey, TValue>) rt.LeftNode);
-            Console.WriteLine(rt.Key + " " + rt.Element);
-            Inorder((BinNode<TKey, TValue>) rt.RightNode);
+            if (node == null) return;
+            Inorder((BinNode<TKey, TValue>) node.LeftNode);
+            Console.WriteLine(node.Key + " " + node.Element);
+            Inorder((BinNode<TKey,TValue>)node.RightNode);
         }
+
+        public void Preorder()
+        {
+            Preorder(_rootNode);
+            Console.WriteLine();
+        }
+
+        private static void Preorder(BinNode<TKey, TValue> node)
+        {
+            if (node == null) return;
+            Console.WriteLine(node.Key + " " + node.Element);
+            Preorder((BinNode<TKey, TValue>)node.LeftNode);
+            Preorder((BinNode<TKey, TValue>)node.RightNode);
+        }
+
+
+        public void Postorder()
+        {
+            Postorder(_rootNode);
+            Console.WriteLine();
+        }
+
+        private static void Postorder(BinNode<TKey, TValue> node)
+        {
+            if (node == null) return;
+            Postorder((BinNode<TKey, TValue>)node.LeftNode);
+            Postorder((BinNode<TKey, TValue>)node.RightNode);
+            Console.WriteLine(node.Key + " " + node.Element);
+        }
+
+
     }
 }
