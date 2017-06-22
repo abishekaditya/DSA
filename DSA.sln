@@ -55,6 +55,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Red Black Tree", "Red Black
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedBlack Operations", "RedBlack Operations\RedBlack Operations.csproj", "{DD92FFCF-C0F4-42F3-AAC5-7A4433ACBB96}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "New Red-Black Tree", "New Red-Black Tree\New Red-Black Tree.csproj", "{B8CF2F24-8FA7-4EAB-BDC8-075E593B8460}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -153,6 +155,10 @@ Global
 		{DD92FFCF-C0F4-42F3-AAC5-7A4433ACBB96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD92FFCF-C0F4-42F3-AAC5-7A4433ACBB96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD92FFCF-C0F4-42F3-AAC5-7A4433ACBB96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8CF2F24-8FA7-4EAB-BDC8-075E593B8460}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8CF2F24-8FA7-4EAB-BDC8-075E593B8460}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8CF2F24-8FA7-4EAB-BDC8-075E593B8460}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8CF2F24-8FA7-4EAB-BDC8-075E593B8460}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -179,5 +185,6 @@ Global
 		{252B9B30-6DC5-4DBA-883E-68FB9133FD96} = {C77F8566-049B-4980-B336-DD821C8371E4}
 		{3DB6AB72-23B9-4FA9-AADA-30BDCF249A8D} = {F332875F-2CA1-4BC8-BFCC-763AF5140149}
 		{DD92FFCF-C0F4-42F3-AAC5-7A4433ACBB96} = {C77F8566-049B-4980-B336-DD821C8371E4}
+		{B8CF2F24-8FA7-4EAB-BDC8-075E593B8460} = {F332875F-2CA1-4BC8-BFCC-763AF5140149}
 	EndGlobalSection
 EndGlobal

@@ -16,7 +16,7 @@ namespace RedBlack_Operations
             rbtree.Insert(13);
             rbtree.Insert(1);
             rbtree.Insert(4);
-            rbtree.Inorder();
+            rbtree.Preorder();
             Console.WriteLine(rbtree.Find(2));
             Console.ReadLine();
         }

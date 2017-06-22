@@ -31,6 +31,23 @@ namespace Red_Black_Tree
         public void Delete(T value)
         {
             throw new NotImplementedException();
+/*
+            var node = Find(_rootNode,value);
+            if (node.Parent.Left == node)
+            {
+                var left = node.Left;
+                node.Parent.Left = left;
+                Balance(ref _rootNode, ref left);
+            }
+            else
+            {
+                var right = node.Right;
+                node.Parent.Right = right;
+                Balance(ref _rootNode, ref right);
+
+            }
+            Console.WriteLine(node.Value + " Deleted");
+*/
         }
 
         public void Inorder()
