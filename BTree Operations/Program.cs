@@ -14,6 +14,8 @@ namespace BTree_Operations
             tree.Insert(1);
             tree.Insert(7);
             tree.Print();
+            tree.Remove(5);
+            tree.Print();
         }
     }
 }

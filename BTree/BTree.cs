@@ -16,6 +16,7 @@ namespace BTree
         public void Print()
         {
             _root?.Traverse();
+            Console.WriteLine();
         }
 
         public BNode<T> Search(T key)
@@ -50,6 +51,18 @@ namespace BTree
                 }
                 else
                     _root.InsertNonFull(key);
+            }
+        }
+
+        public void Remove(T key)
+        {
+            if (_root == null) return;
+
+            _root.Remove(key);
+
+            if (_root.NumKeys == 0)
+            {
+                _root = _root.Leaf ? null : _root.Children[0];
             }
         }
     }
