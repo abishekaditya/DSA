@@ -24,41 +24,41 @@ namespace BinarySearchTree
 
         public void Insert(TKey key, TValue value)
         {
-            _rootNode = InsertHelper(_rootNode, key, value);
+            _rootNode = Insert(_rootNode, key, value);
             Length++;
         }
 
-        private static BinNode<TKey, TValue> InsertHelper(BinNode<TKey, TValue> rootNode, TKey key, TValue value)
+        private static BinNode<TKey, TValue> Insert(BinNode<TKey, TValue> rootNode, TKey key, TValue value)
         {
             if (rootNode == null)
                 return new BinNode<TKey, TValue>(key, value);
             if (rootNode.Key.CompareTo(key) > 0)
-                rootNode.LeftNode = InsertHelper((BinNode<TKey, TValue>) rootNode.LeftNode, key, value);
+                rootNode.LeftNode = Insert((BinNode<TKey, TValue>) rootNode.LeftNode, key, value);
             else
-                rootNode.RightNode = InsertHelper((BinNode<TKey, TValue>) rootNode.RightNode, key, value);
+                rootNode.RightNode = Insert((BinNode<TKey, TValue>) rootNode.RightNode, key, value);
             return rootNode;
         }
 
         public new TValue Remove(TKey key)
         {
-            var temp = FindHelper(_rootNode, key);
+            var temp = Find(_rootNode, key);
             if (temp == null) return default(TValue);
-            _rootNode = RemoveHelper(_rootNode, key);
+            _rootNode = Remove(_rootNode, key);
             Length--;
             return temp;
         }
 
-        private static BinNode<TKey, TValue> RemoveHelper(BinNode<TKey, TValue> rootNode, TKey key)
+        private static BinNode<TKey, TValue> Remove(BinNode<TKey, TValue> rootNode, TKey key)
         {
             if (rootNode == null)
                 return null;
             if (rootNode.Key.CompareTo(key) > 0)
             {
-                rootNode.LeftNode = RemoveHelper((BinNode<TKey, TValue>) rootNode.LeftNode, key);
+                rootNode.LeftNode = Remove((BinNode<TKey, TValue>) rootNode.LeftNode, key);
             }
             else if (rootNode.Key.CompareTo(key) < 0)
             {
-                rootNode.RightNode = RemoveHelper((BinNode<TKey, TValue>) rootNode.RightNode, key);
+                rootNode.RightNode = Remove((BinNode<TKey, TValue>) rootNode.RightNode, key);
             }
             else
             {
@@ -77,17 +77,17 @@ namespace BinarySearchTree
 
         public TValue Find(TKey key)
         {
-            return FindHelper(_rootNode, key);
+            return Find(_rootNode, key);
         }
 
-        private static TValue FindHelper(BinNode<TKey, TValue> rootNode, TKey key)
+        private static TValue Find(BinNode<TKey, TValue> rootNode, TKey key)
         {
             if (rootNode == null) return default(TValue);
             if (rootNode.Key.CompareTo(key) > 0)
-                return FindHelper((BinNode<TKey, TValue>) rootNode.LeftNode, key);
+                return Find((BinNode<TKey, TValue>) rootNode.LeftNode, key);
             return rootNode.Key.CompareTo(key) == 0
                 ? rootNode.Element
-                : FindHelper((BinNode<TKey, TValue>) rootNode.RightNode, key);
+                : Find((BinNode<TKey, TValue>) rootNode.RightNode, key);
         }
 
         private static IBNode<TValue> DeleteMin(IBNode<TValue> bNode)
