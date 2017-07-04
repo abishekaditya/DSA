@@ -1,12 +1,12 @@
 # Data Structures and Algorithms in C#
 
-## Simple Data Structures (FINISHED)
+## ~~Simple Data Structures~~
  1. ~~Linked List~~
  2. ~~Double Linked List~~
  3. ~~Stack~~
  4. ~~Queue~~
 
-## Trees (FINISHED)
+## ~~Trees~~
   1. ~~Binary Tree~~
   2. ~~Binary Search Tree~~
   3. ~~B+ Tree~~ (deletion remaining)
@@ -27,11 +27,11 @@
   4. Van Emde Boas Tree
   
  ## Sorting (HIGHEST)
-  1. Bubble
-  2. Insertion
-  3. Selection
-  4. Heap
-  5. Radix
+  1. ~~Bubble~~
+  2. ~~Insertion~~
+  3. ~~Selection~~
+  4. ~~Heap~~
+  5. ~~Radix~~
   6. Quick
   7. Shell
   8. Merge

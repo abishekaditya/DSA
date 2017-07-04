@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6FC1BBD3-041E-40B7-BC62-8A3AEF8EDB38}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Sorting</RootNamespace>
+    <AssemblyName>Sorting</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bubble\BubbleSort.csproj">
+      <Project>{add3934f-2221-41a6-88b2-903a3746ad20}</Project>
+      <Name>BubbleSort</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HeapSort\HeapSort.csproj">
+      <Project>{49db4a7f-b53e-4802-8cd9-ea3cfa6b1b6e}</Project>
+      <Name>HeapSort</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Insertion\InsertionSort.csproj">
+      <Project>{615fc5e7-5fd2-4ee4-bac0-998dc2d8dc11}</Project>
+      <Name>InsertionSort</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RadixSort\RadixSort.csproj">
+      <Project>{26e34adc-8d08-4b05-bef8-dfc733f412f5}</Project>
+      <Name>RadixSort</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Selection\SelectionSort.csproj">
+      <Project>{abf23df0-bdc0-4c59-bd64-ed92b2e51113}</Project>
+      <Name>SelectionSort</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
