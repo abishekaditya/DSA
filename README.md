@@ -6,10 +6,10 @@
  3. ~~Stack~~
  4. ~~Queue~~
 
-## Trees (HIGHEST)
+## Trees (FINISHED)
   1. ~~Binary Tree~~
   2. ~~Binary Search Tree~~
-  3. B+ Tree
+  3. ~~B+ Tree~~ (deletion remaining)
   4. ~~AVL Tree~~
   5. ~~Red Black Tree~~ (deletion remaining)
   6. ~~Splay Tree~~
@@ -26,7 +26,7 @@
   3. SPQR Tree
   4. Van Emde Boas Tree
   
- ## Sorting (HIGH)
+ ## Sorting (HIGHEST)
   1. Bubble
   2. Insertion
   3. Selection
@@ -46,7 +46,7 @@
   3. Hash Tree
   4. Bloom Filter
   
- ## Graph Traversal (MEDIUM)
+ ## Graph Traversal (HIGH)
   1. Adjacency List
   2. Adjacency Matrix
   3. BFS
