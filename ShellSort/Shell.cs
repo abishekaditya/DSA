@@ -8,20 +8,19 @@ namespace ShellSort
         public static List<T> Sort(List<T> arr)
         {
             var n = arr.Count;
-            
-            for (var i = n/2; i > 0; i /= 2)
+
+            for (var gap = n / 2; gap > 0; gap /= 2)
             {
-                for (var j = i; j < n; j++)
+                for (var i = gap; i < n; i += 1)
                 {
-                    var temp = arr[j];
+                    var temp = arr[i];
 
-                    int k;
-                    for (k = j; k >= i && arr[k -i].CompareTo(temp) > 0; j -= i)
-                        arr[k] = arr[k - i];
+                    int j;
+                    for (j = i; j >= gap && arr[j - gap].CompareTo(temp) >= 1; j -= gap)
+                        arr[j] = arr[j - gap];
 
-                    arr[k] = temp;
+                    arr[j] = temp;
                 }
-
             }
             return arr;
         }
