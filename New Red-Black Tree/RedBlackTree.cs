@@ -1,16 +1,17 @@
 ﻿using System;
-using System.CodeDom;
-using System.Security.Cryptography.X509Certificates;
 
 namespace New_Red_Black_Tree
 {
-    public class RedBlackTree<T> where T: IComparable
+    public class RedBlackTree<T> where T : IComparable
     {
         private Node<T> _root;
 
+        public bool Empty => _root == null;
+
         //Helpers
-        
-        private static bool IsRed(Node<T> x) {
+
+        private static bool IsRed(Node<T> x)
+        {
             return x?.Colour == Colour.Red;
         }
 
@@ -24,8 +25,6 @@ namespace New_Red_Black_Tree
             return Size(_root);
         }
 
-        public bool Empty => _root == null;
-        
         //Find
 
         public T Find(T key)
@@ -46,7 +45,10 @@ namespace New_Red_Black_Tree
             return default(T);
         }
 
-        public bool Contains(T key) => Find(key) != null;
+        public bool Contains(T key)
+        {
+            return Find(key) != null;
+        }
 
         //Insert
 
@@ -59,7 +61,7 @@ namespace New_Red_Black_Tree
 
         private Node<T> Insert(Node<T> node, T key)
         {
-            if (node == null) return new Node<T>(key,Colour.Red,1);
+            if (node == null) return new Node<T>(key, Colour.Red, 1);
 
             var cmp = key.CompareTo(node.Value);
 
@@ -69,11 +71,10 @@ namespace New_Red_Black_Tree
 
             if (IsRed(node.Right) && !IsRed(node.Left)) node = RotateLeft(node);
             if (IsRed(node.Left) && IsRed(node.Left.Left)) node = RotateRight(node);
-            if (IsRed(node.Left) && IsRed(node.Right))  FlipColours(node);
+            if (IsRed(node.Left) && IsRed(node.Right)) FlipColours(node);
             node.Size = Size(node.Left) + Size(node.Right) + 1;
             return node;
         }
-
 
 
         //Remove
@@ -150,7 +151,10 @@ namespace New_Red_Black_Tree
                     node.Value = x.Value;
                     node.Right = DeleteMin(node.Right);
                 }
-                else node.Right = Delete(node.Right, key);
+                else
+                {
+                    node.Right = Delete(node.Right, key);
+                }
             }
             return Balance(node);
         }
@@ -275,6 +279,5 @@ namespace New_Red_Black_Tree
             node.Left.Colour = 1 - node.Left.Colour;
             node.Right.Colour = 1 - node.Right.Colour;
         }
-
     }
 }

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Red_Black_Tree
+﻿namespace Red_Black_Tree
 {
     public interface INode<T>
     {

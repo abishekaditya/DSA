@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("HeapSort")]
+[assembly: AssemblyTitle("ShellSort")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("HeapSort")]
+[assembly: AssemblyProduct("ShellSort")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("49db4a7f-b53e-4802-8cd9-ea3cfa6b1b6e")]
+[assembly: Guid("3128104c-195f-48c7-b4ee-1077161591b3")]
 
 // Version information for an assembly consists of the following four values:
 //

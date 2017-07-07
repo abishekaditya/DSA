@@ -113,12 +113,12 @@ namespace BinarySearchTree
             Console.WriteLine();
         }
 
-        private static void Inorder(BinNode<TKey,TValue> node)
+        private static void Inorder(BinNode<TKey, TValue> node)
         {
             if (node == null) return;
             Inorder((BinNode<TKey, TValue>) node.LeftNode);
             Console.WriteLine(node.Key + " " + node.Element);
-            Inorder((BinNode<TKey,TValue>)node.RightNode);
+            Inorder((BinNode<TKey, TValue>) node.RightNode);
         }
 
         public void Preorder()
@@ -131,8 +131,8 @@ namespace BinarySearchTree
         {
             if (node == null) return;
             Console.WriteLine(node.Key + " " + node.Element);
-            Preorder((BinNode<TKey, TValue>)node.LeftNode);
-            Preorder((BinNode<TKey, TValue>)node.RightNode);
+            Preorder((BinNode<TKey, TValue>) node.LeftNode);
+            Preorder((BinNode<TKey, TValue>) node.RightNode);
         }
 
 
@@ -145,11 +145,9 @@ namespace BinarySearchTree
         private static void Postorder(BinNode<TKey, TValue> node)
         {
             if (node == null) return;
-            Postorder((BinNode<TKey, TValue>)node.LeftNode);
-            Postorder((BinNode<TKey, TValue>)node.RightNode);
+            Postorder((BinNode<TKey, TValue>) node.LeftNode);
+            Postorder((BinNode<TKey, TValue>) node.RightNode);
             Console.WriteLine(node.Key + " " + node.Element);
         }
-
-
     }
 }

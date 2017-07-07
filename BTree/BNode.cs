@@ -1,35 +1,35 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace BTree
 {
     public class BNode<T> where T : IComparable
     {
-        public readonly T[] Keys;
-        private int Size { get; }
         public readonly BNode<T>[] Children;
+        public readonly T[] Keys;
         public int NumKeys;
-        public bool Leaf { get; }
 
         public BNode(int size, bool leaf)
         {
-            Keys = new T[2*size - 1];
+            Keys = new T[2 * size - 1];
             Size = size;
-            Children = new BNode<T>[2*size];
+            Children = new BNode<T>[2 * size];
             NumKeys = 0;
             Leaf = leaf;
         }
+
+        private int Size { get; }
+        public bool Leaf { get; }
 
         public void Traverse()
         {
             int i;
             for (i = 0; i < NumKeys; i++)
             {
-                if(!Leaf) Children[i].Traverse();
+                if (!Leaf) Children[i].Traverse();
                 Console.Write(Keys[i] + " ");
             }
-            
-            if(!Leaf) Children[i].Traverse();
+
+            if (!Leaf) Children[i].Traverse();
         }
 
         public BNode<T> Search(T key)
@@ -67,7 +67,7 @@ namespace BTree
                     if (Keys[i + 1].CompareTo(key) < 0)
                         i++;
                 }
-                Children[i+1].InsertNonFull(key);
+                Children[i + 1].InsertNonFull(key);
             }
         }
 
@@ -75,38 +75,35 @@ namespace BTree
         {
             var newNode = new BNode<T>(node.Size, node.Leaf) {NumKeys = Size - 1};
 
-            for (var j = 0; j < Size-1; j++)
+            for (var j = 0; j < Size - 1; j++)
                 newNode.Keys[j] = node.Keys[j + Size];
-            
+
 
             if (!node.Leaf)
-            {
                 for (var j = 0; j < Size; j++)
                     newNode.Children[j] = node.Children[j + Size];
-                
-            }
             node.NumKeys = Size - 1;
 
-            for (var j = NumKeys; j >= i+1; j--)
+            for (var j = NumKeys; j >= i + 1; j--)
                 Children[j + 1] = Children[j];
-            
+
             Children[i + 1] = newNode;
 
-            for (var j = NumKeys-1; j >= i; j--)
+            for (var j = NumKeys - 1; j >= i; j--)
                 Keys[j + 1] = Keys[j];
 
             Keys[i] = node.Keys[Size - 1];
             NumKeys += 1;
         }
 
-         private int FindKey(T key)
-         {
-             var id = 0;
-             while (id < NumKeys && Keys[id].CompareTo(key) < 0)
+        private int FindKey(T key)
+        {
+            var id = 0;
+            while (id < NumKeys && Keys[id].CompareTo(key) < 0)
                 ++id;
-             return id;
-         }
-        
+            return id;
+        }
+
         public void Remove(T key)
         {
             var id = FindKey(key);
@@ -120,16 +117,16 @@ namespace BTree
             }
             else
             {
-                if(Leaf)
+                if (Leaf)
                     return;
-                
-                var flag = (id == NumKeys);
+
+                var flag = id == NumKeys;
 
                 if (Children[id - 1].NumKeys < Size)
                     Fill(id);
-                
-                if(flag && id > NumKeys)
-                    Children[id-1].Remove(key);
+
+                if (flag && id > NumKeys)
+                    Children[id - 1].Remove(key);
                 else
                     Children[id].Remove(key);
             }
@@ -138,12 +135,16 @@ namespace BTree
         private void Fill(int id)
         {
             if (id != 0 && Children[id - 1].NumKeys >= Size)
+            {
                 BorrowFromPrev(id);
+            }
             else if (id != NumKeys && Children[id + 1].NumKeys >= Size)
+            {
                 BorrowFromSucc(id);
+            }
             else
             {
-               if (id != NumKeys)                
+                if (id != NumKeys)
                     Merge(id);
                 else
                     Merge(id - 1);
@@ -159,9 +160,8 @@ namespace BTree
                 child.Keys[i + 1] = child.Keys[i];
 
             if (!child.Leaf)
-            {    for (var i = child.NumKeys; i  > 0; --i)
+                for (var i = child.NumKeys; i > 0; --i)
                     child.Children[i + 1] = child.Children[i];
-            }
 
             child.Keys[0] = Keys[id - 1];
 
@@ -183,9 +183,7 @@ namespace BTree
             child.Keys[child.NumKeys] = Keys[id];
 
             if (!child.Leaf)
-            {
-                    child.Children[child.NumKeys + 1] = sibling.Children[0];
-            }
+                child.Children[child.NumKeys + 1] = sibling.Children[0];
 
             Keys[id] = sibling.Keys[0];
 
@@ -196,15 +194,12 @@ namespace BTree
                 child.Children[0] = sibling.Children[sibling.NumKeys];
 
             if (!sibling.Leaf)
-            {
                 for (var i = 1; i < sibling.NumKeys; ++i)
                     sibling.Children[i - 1] = sibling.Children[i];
-
-            }
             child.NumKeys += 1;
             sibling.NumKeys -= 1;
         }
-        
+
         private void RemoveFromNonLeaf(int id)
         {
             var key = Keys[id];
@@ -215,7 +210,7 @@ namespace BTree
                 Keys[id] = pred;
                 Children[id].Remove(pred);
             }
-            else if (Children[id+1].NumKeys == Size)
+            else if (Children[id + 1].NumKeys == Size)
             {
                 var succ = GetSucc(id);
                 Keys[id] = succ;
@@ -239,10 +234,8 @@ namespace BTree
                 child.Keys[i + Size] = sibling.Keys[i];
 
             if (!child.Leaf)
-            {
                 for (var i = 0; i < sibling.NumKeys; ++i)
                     child.Children[i + Size] = sibling.Children[i];
-            }
 
             for (var i = id + 1; i < NumKeys; ++i)
                 Keys[i - 1] = Keys[i];
@@ -258,30 +251,23 @@ namespace BTree
         {
             var curr = Children[id + 1];
             while (!curr.Leaf)
-            {
                 curr = curr.Children[curr.NumKeys];
-            }
             return curr.Keys[curr.NumKeys - 1];
         }
-        
+
         private T GetSucc(int id)
         {
             var curr = Children[id + 1];
             while (!curr.Leaf)
-            {
                 curr = curr.Children[0];
-            }
             return curr.Keys[0];
         }
-        
-        
+
+
         private void RemoveFromLeaf(int id)
         {
-
-            for (var i = id+1; i < NumKeys; i++)
-            {
+            for (var i = id + 1; i < NumKeys; i++)
                 Keys[i - 1] = Keys[i];
-            }
             NumKeys--;
         }
     }

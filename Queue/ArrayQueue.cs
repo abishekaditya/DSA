@@ -5,8 +5,8 @@ namespace Queue
     public class ArrayQueue<T> : IQueue<T>
     {
         private const int DefaultSize = 10;
-        private readonly int _maxSize;
         private readonly T[] _array;
+        private readonly int _maxSize;
         private int _front;
         private int _rear;
 

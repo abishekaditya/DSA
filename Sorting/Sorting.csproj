@@ -43,16 +43,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Bubble\BubbleSort.csproj">
-      <Project>{add3934f-2221-41a6-88b2-903a3746ad20}</Project>
+    <ProjectReference Include="..\BubbleSort\BubbleSort.csproj">
+      <Project>{0b972b56-b4c0-4d45-aff7-00ca65af7b45}</Project>
       <Name>BubbleSort</Name>
     </ProjectReference>
     <ProjectReference Include="..\HeapSort\HeapSort.csproj">
       <Project>{49db4a7f-b53e-4802-8cd9-ea3cfa6b1b6e}</Project>
       <Name>HeapSort</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Insertion\InsertionSort.csproj">
-      <Project>{615fc5e7-5fd2-4ee4-bac0-998dc2d8dc11}</Project>
+    <ProjectReference Include="..\InsertionSort\InsertionSort.csproj">
+      <Project>{e4517cdb-5f0d-47e6-9774-098cb2c3e210}</Project>
       <Name>InsertionSort</Name>
     </ProjectReference>
     <ProjectReference Include="..\QuickSort\QuickSort.csproj">
@@ -63,9 +63,13 @@
       <Project>{26e34adc-8d08-4b05-bef8-dfc733f412f5}</Project>
       <Name>RadixSort</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Selection\SelectionSort.csproj">
-      <Project>{abf23df0-bdc0-4c59-bd64-ed92b2e51113}</Project>
+    <ProjectReference Include="..\SelectionSort\SelectionSort.csproj">
+      <Project>{aa189300-f143-4be2-ad83-5e3d9add0b7a}</Project>
       <Name>SelectionSort</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShellSort\ShellSort.csproj">
+      <Project>{3128104c-195f-48c7-b4ee-1077161591b3}</Project>
+      <Name>ShellSort</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

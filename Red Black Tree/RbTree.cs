@@ -1,20 +1,17 @@
 ﻿using System;
-using System.Runtime.InteropServices;
-using System.Security.Cryptography.X509Certificates;
 
 namespace Red_Black_Tree
 {
     public class RbTree<T> : ITree<T> where T : IComparable
     {
-
         private INode<T> _rootNode;
-        
-        public bool IsEmpty => _rootNode == null;
 
         public RbTree()
         {
             Clear();
         }
+
+        public bool IsEmpty => _rootNode == null;
 
         public void Clear()
         {
@@ -25,7 +22,7 @@ namespace Red_Black_Tree
         {
             INode<T> node = new RbNode<T>(value);
             _rootNode = Insert(_rootNode, node);
-            Balance(ref _rootNode,ref node);
+            Balance(ref _rootNode, ref node);
         }
 
         public void Delete(T value)
@@ -56,6 +53,18 @@ namespace Red_Black_Tree
             Console.WriteLine();
         }
 
+        public void Preorder()
+        {
+            Preorder(_rootNode);
+            Console.WriteLine();
+        }
+
+        public void Postorder()
+        {
+            Postorder(_rootNode);
+            Console.WriteLine();
+        }
+
         private static void Inorder(INode<T> node)
         {
             if (node == null) return;
@@ -64,24 +73,12 @@ namespace Red_Black_Tree
             Inorder(node.Right);
         }
 
-        public void Preorder()
-        {
-            Preorder(_rootNode);
-            Console.WriteLine();
-        }
-
         private static void Preorder(INode<T> node)
         {
             if (node == null) return;
             Console.Write($"( {node.Value} : {node.Colour} ) ");
             Preorder(node.Left);
             Preorder(node.Right);
-        }
-
-        public void Postorder()
-        {
-            Postorder(_rootNode);
-            Console.WriteLine();
         }
 
         private static void Postorder(INode<T> node)
@@ -93,13 +90,13 @@ namespace Red_Black_Tree
         }
 
 
-        private void Balance(ref INode<T> where,ref INode<T> node)
+        private void Balance(ref INode<T> where, ref INode<T> node)
         {
             while (node != where && node.Colour == Colour.Red && node.Parent.Colour == Colour.Red)
             {
                 var parent = node.Parent;
                 var grandpa = node.Parent.Parent;
-                
+
                 if (parent == grandpa.Left)
                 {
                     var uncle = grandpa.Right;
@@ -114,7 +111,7 @@ namespace Red_Black_Tree
                     {
                         if (node == parent.Right)
                         {
-                            RotateLeft(ref where,ref parent);
+                            RotateLeft(ref where, ref parent);
                             node = parent;
                             parent = node.Parent;
                         }
@@ -154,7 +151,7 @@ namespace Red_Black_Tree
             where.Colour = Colour.Black;
         }
 
-        private void RotateLeft(ref INode<T> where,ref INode<T> node)
+        private void RotateLeft(ref INode<T> where, ref INode<T> node)
         {
             var right = node.Right;
             node.Right = right.Left;
@@ -169,7 +166,7 @@ namespace Red_Black_Tree
             right.Left = node;
             node.Parent = right;
         }
-        
+
         private void RotateRight(ref INode<T> where, ref INode<T> node)
         {
             var left = node.Left;
@@ -185,15 +182,14 @@ namespace Red_Black_Tree
             left.Right = node;
             node.Parent = left;
         }
-        
+
         private static INode<T> Insert(INode<T> where, INode<T> node)
         {
-           
             if (where == null)
                 return node;
-            
+
             var comp = node.Value.CompareTo(where.Value);
-            
+
             if (comp < 0)
             {
                 where.Left = Insert(where.Left, node);
@@ -216,17 +212,13 @@ namespace Red_Black_Tree
         private static INode<T> Find(INode<T> where, T value)
         {
             if (where == null) return null;
-            
+
             var cmp = value.CompareTo(where.Value);
             if (cmp < 0)
-            {
                 return Find(where.Left, value);
-            }
-            else if (cmp > 0)
-            {
+            if (cmp > 0)
                 return Find(where.Right, value);
-            }
-            else return where;
+            return where;
         }
     }
 }

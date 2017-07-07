@@ -20,7 +20,9 @@
         {
             Height = 1;
             if (Left != null && Right != null)
+            {
                 Height += Utilities.Utilities.Max(Left.Height, Right.Height);
+            }
             else
             {
                 if (Left != null)

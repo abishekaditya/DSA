@@ -8,16 +8,14 @@ namespace HeapSort
         public static List<T> Sort(List<T> arr)
         {
             for (var i = arr.Count / 2 - 1; i >= 0; i--)
-            {
                 Heapify(arr, arr.Count, i);
-            }
 
             for (var i = arr.Count - 1; i >= 0; i--)
             {
                 var temp = arr[0];
                 arr[0] = arr[i];
                 arr[i] = temp;
-                Heapify(arr,i,0);
+                Heapify(arr, i, 0);
             }
             return arr;
         }
@@ -30,12 +28,12 @@ namespace HeapSort
 
             if (l < n && arr[l].CompareTo(arr[largest]) >= 1)
                 largest = l;
-            
+
             if (r < n && arr[r].CompareTo(arr[largest]) >= 1)
                 largest = r;
 
             if (largest == i) return;
-            
+
             var swap = arr[i];
             arr[i] = arr[largest];
             arr[largest] = swap;

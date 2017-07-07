@@ -1,15 +1,7 @@
-﻿using System;
-
-namespace Red_Black_Tree
+﻿namespace Red_Black_Tree
 {
     public class RbNode<T> : INode<T>
     {
-        public T Value { get; set; }
-        public Colour Colour { get; set; }
-        public INode<T> Left { get; set; }
-        public INode<T> Right { get; set; }
-        public INode<T> Parent { get; set; }
-
         public RbNode(T value)
         {
             Value = value;
@@ -18,6 +10,10 @@ namespace Red_Black_Tree
             Colour = Colour.Red;
         }
 
-
+        public T Value { get; set; }
+        public Colour Colour { get; set; }
+        public INode<T> Left { get; set; }
+        public INode<T> Right { get; set; }
+        public INode<T> Parent { get; set; }
     }
 }

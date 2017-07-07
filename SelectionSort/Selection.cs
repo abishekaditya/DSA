@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace SelectionSort
@@ -12,10 +12,8 @@ namespace SelectionSort
                 var min = i;
 
                 for (var j = i + 1; j < arr.Count; j++)
-                {
                     if (arr[j].CompareTo(arr[min]) <= -1)
                         min = j;
-                }
                 var temp = arr[min];
                 arr[min] = arr[i];
                 arr[i] = temp;

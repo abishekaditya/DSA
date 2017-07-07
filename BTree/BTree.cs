@@ -4,8 +4,8 @@ namespace BTree
 {
     public class BTree<T> where T : IComparable
     {
-        private BNode<T> _root;
         private readonly int _size;
+        private BNode<T> _root;
 
         public BTree(int s)
         {
@@ -36,7 +36,7 @@ namespace BTree
             }
             else
             {
-                if (_root.NumKeys == 2*_size-1)
+                if (_root.NumKeys == 2 * _size - 1)
                 {
                     var s = new BNode<T>(_size, false) {Children = {[0] = _root}};
 
@@ -50,7 +50,9 @@ namespace BTree
                     _root = s;
                 }
                 else
+                {
                     _root.InsertNonFull(key);
+                }
             }
         }
 
@@ -61,9 +63,7 @@ namespace BTree
             _root.Remove(key);
 
             if (_root.NumKeys == 0)
-            {
                 _root = _root.Leaf ? null : _root.Children[0];
-            }
         }
     }
 }
