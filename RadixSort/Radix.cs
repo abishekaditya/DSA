@@ -36,7 +36,7 @@ namespace RadixSort
                  arr[i] = output[i];
          }
 
-         private static int Maximum(List<int> arr)
+         private static int Maximum(IReadOnlyList<int> arr)
          {
              var max = arr[0];
              for (var i = 1; i < arr.Count; i++)

@@ -4,6 +4,7 @@ using InsertionSort;
 using BubbleSort;
 using SelectionSort;
 using HeapSort;
+using QuickSort;
 using RadixSort;
 
 namespace Sorting
@@ -12,9 +13,9 @@ namespace Sorting
     {
         private static void Main()
         {
-            var arr = new List<int>(new []{ 2, 1, 5, 4, 6, 3, 11, 9 });
+            var arr = new List<int>(new[] {50, 2, 1, 5, 4, 6, 3, 11, 9});
             
-            Console.WriteLine("1. Bubble\n2. Insertion\n3. Selection\n4. Heap\n5. Radix");
+            Console.WriteLine("1. Bubble\n2. Insertion\n3. Selection\n4. Heap\n5. Radix\n6. Quick");
             Console.Write("Your Choice : ");
             var selection = int.Parse(Console.ReadLine() ?? throw new InvalidOperationException());
             var s = "";
@@ -39,6 +40,10 @@ namespace Sorting
                 case 5:
                     arr = Radix.Sort(arr);
                     s = "Radix";
+                    break;
+                case 6:
+                    arr = Quick<int>.Sort(arr);
+                    s = "Quick";
                     break;
                 default:
                     Console.WriteLine("Choice Wrong");

@@ -55,6 +55,10 @@
       <Project>{615fc5e7-5fd2-4ee4-bac0-998dc2d8dc11}</Project>
       <Name>InsertionSort</Name>
     </ProjectReference>
+    <ProjectReference Include="..\QuickSort\QuickSort.csproj">
+      <Project>{a450a632-06d7-41d3-a709-e698e83c7b31}</Project>
+      <Name>QuickSort</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RadixSort\RadixSort.csproj">
       <Project>{26e34adc-8d08-4b05-bef8-dfc733f412f5}</Project>
       <Name>RadixSort</Name>

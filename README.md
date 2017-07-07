@@ -32,7 +32,7 @@
   3. ~~Selection~~
   4. ~~Heap~~
   5. ~~Radix~~
-  6. Quick
+  6. ~~Quick~~
   7. Shell
   8. Merge
   9. Counting
