@@ -41,11 +41,5 @@
     <Compile Include="RbNode.cs" />
     <Compile Include="RbTree.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Utilities\Utilities.csproj">
-      <Project>{3d1fef57-8439-4bcd-baa2-f567a0dfcb1a}</Project>
-      <Name>Utilities</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -11,7 +11,7 @@ namespace BubbleSort
             {
                 for (var j = 0; j < arr.Count - 1; j++)
                 {
-                    if (arr[j].CompareTo(arr[j + 1]) != 1) continue;
+                    if (arr[j].CompareTo(arr[j + 1]) < 1) continue;
                     var temp = arr[j+1];
                     arr[j + 1] = arr[j];
                     arr[j] = temp;

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace QuickSort
 {
@@ -19,7 +18,7 @@ namespace QuickSort
 
             while (low < high)
             {
-                while (arr[high].CompareTo(pivot) != -1 && low < high)
+                while (arr[high].CompareTo(pivot) > -1 && low < high)
                 {
                     high--;
                 }
@@ -28,7 +27,7 @@ namespace QuickSort
                     arr[low] = arr[high];
                     low++;
                 }
-                while ((arr[low].CompareTo(pivot) != 1) && (low < high))
+                while ((arr[low].CompareTo(pivot) < 1) && (low < high))
                 {
                     low++;
                 }

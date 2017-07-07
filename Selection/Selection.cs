@@ -13,7 +13,7 @@ namespace SelectionSort
 
                 for (var j = i + 1; j < arr.Count; j++)
                 {
-                    if (arr[j].CompareTo(arr[min]) == -1)
+                    if (arr[j].CompareTo(arr[min]) <= -1)
                         min = j;
                 }
                 var temp = arr[min];

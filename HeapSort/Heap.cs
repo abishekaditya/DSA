@@ -28,10 +28,10 @@ namespace HeapSort
             var l = 2 * i + 1;
             var r = 2 * i + 2;
 
-            if (l < n && arr[l].CompareTo(arr[largest]) == 1)
+            if (l < n && arr[l].CompareTo(arr[largest]) >= 1)
                 largest = l;
             
-            if (r < n && arr[r].CompareTo(arr[largest]) == 1)
+            if (r < n && arr[r].CompareTo(arr[largest]) >= 1)
                 largest = r;
 
             if (largest == i) return;

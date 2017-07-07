@@ -43,10 +43,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\New Red-Black Tree\New Red-Black Tree.csproj">
-      <Project>{b8cf2f24-8fa7-4eab-bdc8-075e593b8460}</Project>
-      <Name>New Red-Black Tree</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Red Black Tree\Red Black Tree.csproj">
       <Project>{3db6ab72-23b9-4fa9-aada-30bdcf249a8d}</Project>
       <Name>Red Black Tree</Name>
