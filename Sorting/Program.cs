@@ -18,7 +18,6 @@ namespace Sorting
 
             while (selection != -1)
             {
-                // var arr = new List<char>(new[] { 'a', 'd', 'c', 'b' });
                 var arr = new List<int>(new[] {4, 5, 2, 1, 3, 7, 6, 8, 9, 10});
                 Console.Clear();
                 Console.WriteLine("1. Bubble\n2. Insertion\n3. Selection\n4. Heap\n5. Radix\n6. Quick\n7. Shell");

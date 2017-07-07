@@ -18,6 +18,7 @@ namespace SelectionSort
                 arr[min] = arr[i];
                 arr[i] = temp;
             }
+            
             return arr;
         }
     }
