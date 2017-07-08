@@ -36,9 +36,11 @@
   7. ~~Shell~~
   8. Merge
   9. Counting
+  10. Cocktail
+  11. Tim
   -----------
-  10. KMP
-  11. Rabin-Karp
+  12. KMP
+  13. Rabin-Karp
  
  ## Hashes (LOW)
   1. Hash List
