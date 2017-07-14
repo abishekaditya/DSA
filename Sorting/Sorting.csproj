@@ -55,6 +55,10 @@
       <Project>{e4517cdb-5f0d-47e6-9774-098cb2c3e210}</Project>
       <Name>InsertionSort</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MergeSort\MergeSort.csproj">
+      <Project>{f0362e66-48da-491e-ba2b-65783ef35219}</Project>
+      <Name>MergeSort</Name>
+    </ProjectReference>
     <ProjectReference Include="..\QuickSort\QuickSort.csproj">
       <Project>{a450a632-06d7-41d3-a709-e698e83c7b31}</Project>
       <Name>QuickSort</Name>

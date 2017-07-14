@@ -5,6 +5,7 @@ using QuickSort;
 using RadixSort;
 using BubbleSort;
 using InsertionSort;
+using MergeSort;
 using SelectionSort;
 using ShellSort;
 
@@ -20,7 +21,7 @@ namespace Sorting
             {
                 var arr = new List<int>(new[] {4, 5, 2, 1, 3, 7, 6, 8, 9, 10});
                 Console.Clear();
-                Console.WriteLine("1. Bubble\n2. Insertion\n3. Selection\n4. Heap\n5. Radix\n6. Quick\n7. Shell");
+                Console.WriteLine("1. Bubble\n2. Insertion\n3. Selection\n4. Heap\n5. Radix\n6. Quick\n7. Shell\n8. Merge");
                 Console.Write("Your Choice : ");
                 selection = int.Parse(Console.ReadLine() ?? throw new InvalidOperationException());
                 var s = "";
@@ -53,6 +54,10 @@ namespace Sorting
                     case 7:
                         arr = Shell<int>.Sort(arr);
                         s = "Shell";
+                        break;
+                    case 8:
+                        arr = Merge<int>.Sort(arr);
+                        s = "Merge";
                         break;
                     default:
                         Console.WriteLine("Choice Wrong");
