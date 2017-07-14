@@ -34,8 +34,9 @@
   5. ~~Radix~~
   6. ~~Quick~~
   7. ~~Shell~~
-  8. Merge
-  9. Counting
+  8. ~~Merge~~
+  9. Tim
+  10. Cocktail
   -----------
   10. KMP
   11. Rabin-Karp
