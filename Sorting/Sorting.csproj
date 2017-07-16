@@ -47,6 +47,10 @@
       <Project>{0b972b56-b4c0-4d45-aff7-00ca65af7b45}</Project>
       <Name>BubbleSort</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CocktailSort\CocktailSort.csproj">
+      <Project>{f55a24b2-88d8-4c98-a1e8-accf280e56db}</Project>
+      <Name>CocktailSort</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HeapSort\HeapSort.csproj">
       <Project>{49db4a7f-b53e-4802-8cd9-ea3cfa6b1b6e}</Project>
       <Name>HeapSort</Name>

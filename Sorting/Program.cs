@@ -9,6 +9,7 @@ using MergeSort;
 using SelectionSort;
 using ShellSort;
 using TimSort;
+using CocktailSort;
 
 namespace Sorting
 {
@@ -70,6 +71,10 @@ namespace Sorting
                     case 9:
                         arr = Tim<int>.Sort(arr);
                         s = "Tim";
+                        break;
+                    case 10:
+                        arr = Cocktail<int>.Sort(arr);
+                        s = "Cocktail";
                         break;
                     default:
                         Console.WriteLine("Choice Wrong");

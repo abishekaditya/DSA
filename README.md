@@ -29,10 +29,10 @@
   7. ~~Shell~~
   8. ~~Merge~~
   9. ~~Tim~~
-  10. Cocktail
+  10. ~~Cocktail~~
   -----------
-  10. KMP
-  11. Rabin-Karp
+  11. KMP
+  12. Rabin-Karp
   
  ## Graph Traversal (HIGH)
   1. Adjacency List
