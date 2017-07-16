@@ -18,14 +18,7 @@
      * ~~Max Heap~~
   8. ~~Trie~~
   9. ~~Huffman~~ 
-  
-## Advanced Data Structures (LOWEST)
-  1. Skip List
-  2. Suffix Tree
-  2. Difference List
-  3. SPQR Tree
-  4. Van Emde Boas Tree
-  
+    
  ## Sorting (HIGHEST)
   1. ~~Bubble~~
   2. ~~Insertion~~
@@ -35,17 +28,11 @@
   6. ~~Quick~~
   7. ~~Shell~~
   8. ~~Merge~~
-  9. Tim
+  9. ~~Tim~~
   10. Cocktail
   -----------
   10. KMP
   11. Rabin-Karp
- 
- ## Hashes (LOW)
-  1. Hash List
-  2. Hash Table
-  3. Hash Tree
-  4. Bloom Filter
   
  ## Graph Traversal (HIGH)
   1. Adjacency List
@@ -54,6 +41,8 @@
   4. DFS
   5. Topoligical Sort
   5. Prim
-  6. Kruskal
+  6. Kruskal 
   7. Djikstra
   8. Floyd Warshall
+  9. Bellman Ford
+  10. A*

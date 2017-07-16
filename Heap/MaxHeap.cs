@@ -1,5 +1,5 @@
 ﻿using System;
-using static Utilities.Utilities;
+using Utils;
 
 namespace Heap
 {
@@ -35,7 +35,7 @@ namespace Heap
                     temp++;
                 if (_heap[pos].CompareTo(_heap[temp]) >= 0)
                     return;
-                Swap(_heap, pos, temp);
+                Utilities.Swap(_heap, pos, temp);
                 pos = temp;
             }
         }
@@ -74,7 +74,7 @@ namespace Heap
             _heap[curr] = value;
             while (curr != 0 && _heap[curr].CompareTo(_heap[Parent(curr)]) > 0)
             {
-                Swap(_heap, curr, Parent(curr));
+                Utilities.Swap(_heap, curr, Parent(curr));
                 curr = Parent(curr);
             }
         }
@@ -83,7 +83,7 @@ namespace Heap
         {
             if (Size <= 0)
                 throw new Exception("Empty Heap");
-            Swap(_heap, 0, --Size);
+            Utilities.Swap(_heap, 0, --Size);
             if (Size != 0)
                 SiftDown(0);
             return _heap[Size];
@@ -99,10 +99,10 @@ namespace Heap
             }
             else
             {
-                Swap(_heap, pos, --Size);
+                Utilities.Swap(_heap, pos, --Size);
                 while (pos > 0 && _heap[pos].CompareTo(_heap[Parent(pos)]) > 0)
                 {
-                    Swap(_heap, pos, Parent(pos));
+                    Utilities.Swap(_heap, pos, Parent(pos));
                     pos = Parent(pos);
                 }
                 if (Size != 0) SiftDown(pos);

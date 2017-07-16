@@ -75,6 +75,10 @@
       <Project>{3128104c-195f-48c7-b4ee-1077161591b3}</Project>
       <Name>ShellSort</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TimSort\TimSort.csproj">
+      <Project>{003fa31b-20c1-40b5-921b-69c2e3c8bd5f}</Project>
+      <Name>TimSort</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

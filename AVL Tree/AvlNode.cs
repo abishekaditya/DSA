@@ -1,4 +1,6 @@
-﻿namespace AVL_Tree
+﻿using Utils;
+
+namespace AVL_Tree
 {
     public class AvlNode<T> : INode<T>
     {
@@ -21,7 +23,7 @@
             Height = 1;
             if (Left != null && Right != null)
             {
-                Height += Utilities.Utilities.Max(Left.Height, Right.Height);
+                Height += Utilities.Max(Left.Height, Right.Height);
             }
             else
             {
